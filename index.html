@@ -253,8 +253,8 @@
   <section id="graded" class="content-section">
     <h2>Graded Exercises</h2>
     <ul>
-      <li><a href="public/Q41GRubidiumJaldon">1st Graded Exercise</a></li>
-     <li><a href="public/Q42GRubidiumJaldon">2nd Graded Exercise</a></li>
+      <li><a href="public/Q41GRubidiumJaldon.html">1st Graded Exercise</a></li>
+      <li><a href="public/Q42GRubidiumJaldon.html">2nd Graded Exercise</a></li>
     </ul>
   </section>
 
@@ -285,7 +285,6 @@
   </footer>
 
   <script>
-    // reveal-on-scroll effect
     const sections = document.querySelectorAll('.content-section');
     const reveal = () => {
       sections.forEach(sec => {
@@ -296,7 +295,6 @@
     window.addEventListener('scroll', reveal);
     reveal();
 
-    // sparkle trail on hover
     document.querySelectorAll('a').forEach(link => {
       link.addEventListener('mousemove', e => {
         const sparkle = document.createElement('span');
