@@ -57,17 +57,23 @@
 
 - Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
 
+- Answer: The "sidebar" box moves either downward or to the right depending on which value you change. If you make the "top"'s pixel value bigger, it moves downwards, and if you make the left pixel value bigger, the box moves to the right. The static position changes.
+
 ### Step 2 (Fixed):
 
 - Add in css ```position: fixed; bottom: 0; width: 100%;``` to .footer.
 
 - Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
 
+- Answer: The footer remains at the bottom of the page even when you scroll. It stays like that because of "position: fixed", which locks the footer to the viewpoint and not the layout.
+
 ### Step 3 (Absolute):
 
 - Add in css ```position: absolute; top: 66px; left: 200px;``` to .content.
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
+
+- Answer: The element moved from the "normal flow" of elements, and its new position is based off of the nearest parent. Absolute positioning moves with the screen as compared to fixed positioning which stays where you want it to regardless.
 
 ### Step 4 : (Absolute)
 
@@ -88,6 +94,8 @@
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
 
+- Answer: .notice appears on the top of the .content box because it has a higher z-index value. When youswap the z-values of the content and notice, the content ends up covering the notice. Instead of changing up-down-left right positioning, it changes positioning topographically.
+
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
@@ -97,8 +105,16 @@
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
 
+    - Answer: **Static** is the default; if your object doesnt have any specific positioning conditions. It basically means the elements are placed based on the natural flow of the HTML. Moving (like using top, right, etc.) the object generally has no effect. **Relative** positioning is like static wherein the elements follow the natural flow of the page, but since they're not rooted to one place only, moving them works. They're still connected or reserved to their orignal place on the page. **Absolute** moves from the page's normal flow of elements, and its new position is based off of the nearest parent. **Fixed** is always positioned relative to the viewpoint and not the page's layout.
+
     b. How does absolute positioning depend on its parent element?
+
+    - Answer: 
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
 
+    - Answer: Sticky allows an element to stick inside its parent container during scrolling, while fixed keeps an element fixed relative to the viewport regardless of scrolling.
+
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+
+    - Answer
