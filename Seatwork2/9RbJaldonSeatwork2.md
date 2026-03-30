@@ -100,6 +100,13 @@
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+ 
+- Answers: 
+    * Changes: .notice -->  top: 66px and left: 430px
+    * relative --> notice stays inside content
+      fixed --> notice ignores content and stick to screen
+    * Higher z-index values make it higher/above other elements with lower z-index scores. 
+
 
 3. Please answer the following reflection questions (15 minutes)
 
@@ -109,7 +116,7 @@
 
     b. How does absolute positioning depend on its parent element?
 
-    - Answer: 
+    - Answer: An element with position: absolute is positioned relative to its nearest ancestor that has a non-static position (like relative, absolute, or fixed). If no such parent exists, it positions itself relative to the entire page (viewport). Its top, left, right, and bottom values are measured from that reference point.
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
 
@@ -117,4 +124,5 @@
 
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
 
-    - Answer
+    - Answer: I could use fixed to keep important info like the event date or a “Register Now” button always visible at the top of the screen as users scroll. You might use absolute inside a relatively positioned banner to place text like the event title or theme directly over an image in a specific spot. You could also use sticky could also help for a schedule or navigation bar so it stays visible once users scroll to that section.
+
