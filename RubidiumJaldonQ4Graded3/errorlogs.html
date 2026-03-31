@@ -1,60 +1,67 @@
 <tr>
   <td> 1 </td> 
-  <td> JS – styleleft </td> 
-  <td> wrong property name, missing the dot so it doesnt work </td>
-  <td> changed it to point.style.left </td>
+  <td> JS - line 7-8 (style.left and style.bottom spelling) </td> 
+  <td> wrong property names so the red dot doesnt move on the coordinate plane </td>
+  <td> fixed by using style.left and style.bottom instead of styleleft and stylebottom </td>
 </tr>
+
 <tr>
   <td> 2 </td> 
-  <td> JS – stylebottom </td> 
-  <td> same problem as the first one, missing dot so css doesnt apply </td>
-  <td> changed it to point.style.bottom </td>
+  <td> JS - line 9 (coordinatePlane appendChild usage) </td> 
+  <td> point was being added but old points were not cleared so multiple dots appear </td>
+  <td> fixed by making sure only one point is shown at a time inside the container </td>
 </tr>
+
 <tr>
   <td> 3 </td> 
-  <td> JS – function end </td> 
-  <td> function didnt have a closing brace </td>
-  <td> added } at the end of the function </td>
+  <td> JS - line 2 (in1 variable not defined) </td> 
+  <td> in1 was used without being properly linked to the html element </td>
+  <td> fixed by using document.getElementById before using in1 </td>
 </tr>
+
 <tr>
   <td> 4 </td> 
-  <td> CSS – nav a :hover </td> 
-  <td> extra space makes it target something inside the link instead of the link itself </td>
-  <td> changed it to nav a:hover </td>
+  <td> JS - line 11-24 (divisa condition order) </td> 
+  <td> border case was checked last so it could be overwritten by other conditions </td>
+  <td> fixed by checking divisa first before all directional conditions </td>
 </tr>
+
 <tr>
   <td> 5 </td> 
-  <td> CSS – nav a display </td> 
-  <td> using block makes the links stack instead of staying in one line </td>
-  <td> changed display to inline-block </td>
+  <td> JS - line 25 (missing function closing brace) </td> 
+  <td> function block was not properly closed at the end </td>
+  <td> fixed by adding the missing closing } </td>
 </tr>
+
 <tr>
   <td> 6 </td> 
-  <td> CSS – nav </td> 
-  <td> navbar wasnt fixed so it scrolls which isnt what the instructions said </td>
-  <td> added position: fixed; top: 0; left: 0; </td>
+  <td>#25 - #28</td> 
+  <td>The Nav was required to be "fixed" and not scroll</td>
+  <td>Added position: fixed; top: 0; left: 0; z-index: 1000;</td>
 </tr>
-<tr>
-  <td> 7 </td> 
-  <td> CSS – body font-family </td> 
-  <td> fonts were written multiple times so only the last one worked </td>
-  <td> combined them into one font-family line </td>
-</tr>
-<tr>
-  <td> 8 </td> 
-  <td> CSS – .point </td> 
-  <td> no position set so the point wont move where its supposed to </td>
-  <td> added position: absolute </td>
-</tr>
-<tr>
-  <td> 9 </td> 
-  <td> CSS – th, td, tr </td> 
-  <td> adding border to tr messes up the table borders </td>
-  <td> removed tr and kept th, td only </td>
-</tr>
-<tr>
-  <td> 10 </td> 
-  <td> CSS – #yAxis </td> 
-  <td> used bottom instead of top so its inconsistent with the other axis </td>
-  <td> changed bottom to top </td>
-</tr>
+
+  <tr>
+        <td> 7 </td> 
+        <td>#7 - #9</td> 
+        <td>CSS doesn't combine these. It only reads the last one which is Roboto</td>
+        <td>Change it into this: font-family: 'Poppins', 'Open Sans', 'Roboto', sans-serif;</td>
+      </tr>
+      <tr>
+        <td> 8 </td> 
+        <td>#35</td> 
+        <td>display: block on nav a forced links to stack instead of staying on one line</td>
+        <td>display: inline-block;</td>
+      </tr>
+      <tr>
+        <td> 9 </td> 
+        <td>#40</td> 
+        <td>The space in nav a :hover prevented the link itself from changing color</td>
+        <td>Remove the space: nav a:hover</td>
+      </tr>
+      <tr>
+        <td> 10 </td> 
+        <td>#52-#56</td> 
+        <td>.point lacked position: absolute, which made the JS left/bottom values get ignored</td>
+        <td>Add position: absolute</td>
+      </tr>
+    
