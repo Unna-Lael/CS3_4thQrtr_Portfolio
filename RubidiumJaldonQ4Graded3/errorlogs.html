@@ -1,67 +1,139 @@
-<tr>
-  <td> 1 </td> 
-  <td> JS - line 7-8 (style.left and style.bottom spelling) </td> 
-  <td> wrong property names so the red dot doesnt move on the coordinate plane </td>
-  <td> fixed by using style.left and style.bottom instead of styleleft and stylebottom </td>
-</tr>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="JALDON, Unna">
+  <meta name="author" content="YBANEZ, Raiza">
+  <meta name="description" content="testing and debugging">
+  <meta name="keywords" content="testing and debugging">
+  <title>CS 3 3Q JALDON AND YBANEZ</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-<tr>
-  <td> 2 </td> 
-  <td> JS - line 9 (coordinatePlane appendChild usage) </td> 
-  <td> point was being added but old points were not cleared so multiple dots appear </td>
-  <td> fixed by making sure only one point is shown at a time inside the container </td>
-</tr>
+  <style>
+    tr:nth-child(1) ~ tr:nth-child(odd) {
+      background-color: lightgray;
+      color: black;
+    }
+    td, th {
+      padding: 10px;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto;
+    }
+    caption {
+      font-size: 2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    
+  </style>
+</head>
 
-<tr>
-  <td> 3 </td> 
-  <td> JS - line 2 (in1 variable not defined) </td> 
-  <td> in1 was used without being properly linked to the html element </td>
-  <td> fixed by using document.getElementById before using in1 </td>
-</tr>
+<body>
+  <header>
+    <nav>
+      <a href="index.html#start">Table</a>
+      <a href="index.html#input">Input</a>
+      <a href="index.html#output">Output</a>
+    </nav>
+    
+    <h1 style="padding: 30px">Your Name / Section Mar 2026 </h1>
+  </header>
 
-<tr>
-  <td> 4 </td> 
-  <td> JS - line 11-24 (divisa condition order) </td> 
-  <td> border case was checked last so it could be overwritten by other conditions </td>
-  <td> fixed by checking divisa first before all directional conditions </td>
-</tr>
-
-<tr>
-  <td> 5 </td> 
-  <td> JS - line 25 (missing function closing brace) </td> 
-  <td> function block was not properly closed at the end </td>
-  <td> fixed by adding the missing closing } </td>
-</tr>
-
-<tr>
-  <td> 6 </td> 
-  <td>#25 - #28</td> 
-  <td>The Nav was required to be "fixed" and not scroll</td>
-  <td>Added position: fixed; top: 0; left: 0; z-index: 1000;</td>
-</tr>
-
-  <tr>
+  <section id="table">
+    <table> 
+      <caption> Error Logs - place errors found in the table below</caption>
+      <tr class="rColor">
+        <th> item# </th> 
+        <th> code line#<br/>CSS or JS </th> 
+        <th> Description</th>
+        <th> Correction Done</th>
+      </tr>
+      <tr>
+        <td> 1 </td> 
+        <td> #7 - #8</td>
+        <td>styleleft and stylebottom is not a valid JS property</td>
+        <td>Change it to point.style.left and point.style.bottom respectively</td>
+      </tr>
+      <tr>
+        <td> 2 </td> 
+        <td> #1</td>
+        <td>The function plotPoint was never closed</td>
+        <td>Add a } after the last else block</td>
+      </tr>
+      <tr>
+        <td> 3 </td> 
+        <td>#2</td>
+        <td>Used in1 and out1 without getting them from the html</td>
+        <td>Used document.getElementById to properly assign them</td>
+      </tr>
+      <tr>
+        <td> 4 </td> 
+        <td>#9</td>JS
+        <td>Every time the function runs it keeps adding dots on top of each other</td>
+        <td>Cleared the coordinatePlane before adding a new point</td>
+      </tr>
+      <tr>
+        <td> 5 </td> 
+        <td>#11-24</td> 
+        <td>Border case was only caught by else which is not clear and can be wrong logically</td>
+        <td>Added explicit condition if (x == x0 || y == y0) first</td>
+      </tr>
+      <tr>
+        <td> 6 </td> 
+        <td>#25 - #28</td>
+        <td>The Nav was required to be "fixed" and not scroll</td>
+        <td>Added position: fixed; top: 0; left: 0; z-index: 1000;</td>
+      </tr>
+      <tr>
         <td> 7 </td> 
-        <td>#7 - #9</td> 
+        <td>#7 - #9</td>
         <td>CSS doesn't combine these. It only reads the last one which is Roboto</td>
         <td>Change it into this: font-family: 'Poppins', 'Open Sans', 'Roboto', sans-serif;</td>
       </tr>
       <tr>
         <td> 8 </td> 
-        <td>#35</td> 
+        <td>#35</td>
         <td>display: block on nav a forced links to stack instead of staying on one line</td>
         <td>display: inline-block;</td>
       </tr>
       <tr>
         <td> 9 </td> 
-        <td>#40</td> 
+        <td>#40</td>
         <td>The space in nav a :hover prevented the link itself from changing color</td>
         <td>Remove the space: nav a:hover</td>
       </tr>
       <tr>
         <td> 10 </td> 
-        <td>#52-#56</td> 
+        <td>#52-#56</td>
         <td>.point lacked position: absolute, which made the JS left/bottom values get ignored</td>
         <td>Add position: absolute</td>
       </tr>
-    
+     
+    </table>
+    <hr>
+  </section>
+  
+   
+  <!--- anchors for socmed site are done with image sprites -->
+  <footer>
+    <a href="https://facebook.com"> 
+    <div class="icon facebook"></div>
+    </a>
+    <a href="https://twitter.com">
+    <div class="icon twitter"></div>
+    </a>
+    <a href="https://github.com">
+    <div class="icon github"></div>
+    </a>
+  </footer>
+ 
+</body>
+
+</html>
